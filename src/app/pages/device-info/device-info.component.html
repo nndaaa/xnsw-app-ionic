@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismissModal('modalDeviceInfo')">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>设备信息</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-card class="welcome-card" color="light">
+    <ion-card-header>
+      <ion-card-subtitle>
+        设备码：{{info.qrCode}}
+      </ion-card-subtitle>
+      <ion-card-title>设备名称：{{info.deviceName}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>设备型号：{{info.deviceModle}} </p>
+      <p>生成厂家：{{info.factory}} </p>
+      <p>出厂日期：{{info.produceDate}} </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="welcome-card" color="light">
+    <ion-card-header>
+      <ion-card-subtitle>
+        领用部门：{{info.department}} - {{info.location}}
+      </ion-card-subtitle>
+      <ion-card-title>领用人：{{info.owner}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>状态：{{info.status}} </p>
+      <p>网络：{{info.network}} </p>
+      <p>IP地址：{{info.ipAdress}} </p>
+      <p *ngIf="info.macAdress != ''">mac地址：{{info.macAdress}}</p>
+      <p>检查时间：{{info.operatorAt}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="dismissModal('modalDeviceInfo')" color="light">
+            <ion-icon name="checkbox"></ion-icon>
+          确认
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="deviceEdit()" color="secondary">
+          <ion-icon name="exit"></ion-icon>
+          编辑
+        </ion-button>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

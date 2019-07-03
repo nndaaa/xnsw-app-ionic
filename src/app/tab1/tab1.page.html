@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      设备管理
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/shapes.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>dArk@2019.06.30</ion-card-subtitle>
+        <ion-card-title>设备查验</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-searchbar debounce="500" showCancelButton="focus" placeholder="设备码输入" cancelButtonText="取消" animated></ion-searchbar>
+        <p style="margin-top:20px">请在查询框中输入设备码</p>
+        <p>或点击下方按钮，进行设备码扫描，查验设备详细信息，可支持二维码、条形码查验</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-button style="margin-top: 40px;margin-left:35%" size="large" (click)="scanZbar()">
+        <ion-icon name="barcode"></ion-icon>
+      扫描
+    </ion-button>
+    <!-- <ion-button style="margin-top: 5%;margin-left:35%" (click)="scanQrcode()">
+      <ion-icon slot="start" name="star"></ion-icon>
+      开始qrcode
+    </ion-button> -->
+</ion-content>

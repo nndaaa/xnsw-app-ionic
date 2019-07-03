@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismissModal('modalDeviceEdit')">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      设备信息编辑
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>
+        设备信息
+      </ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label position="floating">设备码</ion-label>
+      <ion-input [(ngModel)]="info.qrCode"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">设备名称</ion-label>
+      <ion-input [(ngModel)]="info.deviceName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">设备型号</ion-label>
+      <ion-input [(ngModel)]="info.deviceModle"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">生成厂家</ion-label>
+      <ion-input [(ngModel)]="info.factory"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">出厂日期</ion-label>
+      <ion-input [(ngModel)]="info.produceDate"></ion-input>
+    </ion-item>
+    <ion-item-divider>
+      <ion-label>
+        使用信息
+      </ion-label>
+    </ion-item-divider>
+    <ion-item>
+        <ion-label position="floating">使用人</ion-label>
+        <ion-input [(ngModel)]="info.owner"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">使用部门</ion-label>
+      <ion-input [(ngModel)]="info.department"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">存放地点</ion-label>
+      <ion-input [(ngModel)]="info.location"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">使用状态</ion-label>
+      <ion-input [(ngModel)]="info.status"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">网络状态</ion-label>
+      <ion-input [(ngModel)]="info.network"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">IP地址</ion-label>
+      <ion-input [(ngModel)]="info.ipAdress"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">MAC地址</ion-label>
+      <ion-input [(ngModel)]="info.macAdress"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-grid style="margin-top: -10px">
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="deviceEdit()" color="primary">
+          <ion-icon name="done-all"></ion-icon>
+          提交
+        </ion-button>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
